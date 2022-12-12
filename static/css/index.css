@@ -121,3 +121,14 @@ nav {
 .hamburger {
   margin-left: 0;
 }
+.logIn {
+  display: flex;
+  align-items: center;
+}
+.logIn a {
+  text-transform: capitalize;
+  font-family: Oswald, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: 8px;
+}
