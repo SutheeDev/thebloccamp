@@ -1,3 +1,4 @@
+/* Universal setup */
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +9,7 @@ body {
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 1px;
-  background-color: #222222;
+  background-color: #221333;
 }
 ul,
 li,
@@ -16,3 +17,7 @@ a {
   text-decoration: none;
   color: white;
 }
+/* olor Palette */
+/* dark blue: #221333; */
+/* reddish: #df3311 */
+/* white: #ffffff */
