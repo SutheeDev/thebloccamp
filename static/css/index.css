@@ -4,10 +4,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: Oswald;
+  src: url(../font/Oswald/Oswald-VariableFont_wght.ttf)
+    format("woff2-variations");
+  font-weight: 200 700;
+  font-stretch: 100%;
+  font-style: normal;
+}
 body {
   font-family: "Anton", sans-serif;
-  text-transform: uppercase;
   font-size: 14px;
+  color: #ffffff;
   letter-spacing: 1px;
   background-color: #221333;
 }
@@ -21,3 +29,25 @@ a {
 /* dark blue: #221333; */
 /* reddish: #df3311 */
 /* white: #ffffff */
+/* Header */
+header {
+  font-family: Oswald, sans-serif;
+  background-color: #221333;
+  text-transform: uppercase;
+  text-align: center;
+}
+header h4 {
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 3.2px;
+}
+header h1 {
+  font-weight: 300;
+  font-size: 44px;
+  letter-spacing: 3px;
+}
+header p {
+  font-weight: 100;
+  letter-spacing: 4.7px;
+  font-size: 13px;
+}
