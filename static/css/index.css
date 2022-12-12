@@ -13,10 +13,10 @@
   font-style: normal;
 }
 body {
-  font-family: "Anton", sans-serif;
+  /* font-family: "Anton", sans-serif; */
   font-size: 14px;
   color: #ffffff;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
 
   height: 200vh;
 }
@@ -92,6 +92,9 @@ header p {
   letter-spacing: 4.7px;
   font-size: 12px;
 }
+/* -------------------- */
+/* Header Media Queries */
+/* -------------------- */
 @media screen and (min-width: 850px) {
   header {
     position: relative;
@@ -103,7 +106,9 @@ header p {
 }
 @media screen and (max-width: 450px) {
   header {
-    position: relative;
+    /* position: absolute;
+    top: 0px;
+    left: 0; */
     padding-bottom: 30px;
   }
   header h4 {
@@ -137,6 +142,9 @@ section.navigation {
   z-index: 2;
   transition: all 0.2s ease;
 }
+.navigation {
+  transition: all 0.2s ease;
+}
 .container {
   width: 90vw;
   margin: 0 auto;
@@ -153,11 +161,12 @@ nav {
 .links li {
   text-transform: uppercase;
   font-family: Oswald, sans-serif;
+  font-size: 20px;
   font-weight: 400;
   cursor: pointer;
 }
 .links li svg {
-  margin-bottom: 40px;
+  margin-bottom: 100px;
   fill: #df3311;
 }
 .logIn {
@@ -170,16 +179,20 @@ nav {
   font-family: Oswald, sans-serif;
   font-weight: 400;
   font-size: 16px;
+  letter-spacing: 1px;
   margin-left: 8px;
   color: #df3311;
 }
 .link {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 section.navigation.open-nav {
   height: auto;
 }
+/* -------------------- */
+/* Navigation Bar Media Queries */
+/* -------------------- */
 @media screen and (min-width: 850px) {
   section.navigation {
     background-color: transparent;
@@ -204,6 +217,7 @@ section.navigation.open-nav {
   }
   .links li {
     margin-right: 40px;
+    font-size: 14px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
