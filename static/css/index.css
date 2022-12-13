@@ -36,7 +36,6 @@ li {
 /* Header */
 /* -------------------- */
 header {
-  /* font-family: Oswald, sans-serif; */
   position: absolute;
   top: 60px;
   left: 0;
@@ -105,9 +104,6 @@ header p {
 }
 @media screen and (max-width: 450px) {
   header {
-    /* position: absolute;
-    top: 0px;
-    left: 0; */
     padding-bottom: 30px;
   }
   header h4 {
@@ -159,7 +155,6 @@ section.navigation {
 }
 .links li {
   text-transform: uppercase;
-  /* font-family: Oswald, sans-serif; */
   font-size: 20px;
   font-weight: 400;
   cursor: pointer;
@@ -175,7 +170,6 @@ section.navigation {
 }
 .logIn a {
   text-transform: capitalize;
-  /* font-family: Oswald, sans-serif; */
   font-weight: 400;
   font-size: 16px;
   letter-spacing: 1px;

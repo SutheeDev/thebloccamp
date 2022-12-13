@@ -1,3 +1,6 @@
+/* ---------------- */
+/* Slideshow */
+/* ---------------- */
 .swiper {
   width: 100vw;
   height: 600px;
@@ -101,7 +104,9 @@
 }
 @media screen and (max-width: 850px) {
   .slideshow {
-    margin-top: 202px;
+    position: absolute;
+    top: 276px;
+    left: 0;
   }
   .slides-info {
     padding: 5rem 6rem;
@@ -134,8 +139,6 @@
   .slide-info div .btn-block {
     transform: translate(-36%, -34%);
     width: 172px;
-    /* transform: translate(-31%, -51%);
-    width: 192px; */
   }
 }
 @media screen and (max-width: 850px) {
