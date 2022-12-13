@@ -1,0 +1,9 @@
+.swiper {
+  width: 100vw;
+  height: 600px;
+  color: #221333;
+}
+.swiper-slide img {
+  width: 100%;
+  object-fit: cover;
+}

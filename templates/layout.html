@@ -11,6 +11,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../static/css/index.css" />
+    <link rel="stylesheet" href="../static/css/slide.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <title>Bloc Camp</title>
   </head>
   <body>
@@ -254,8 +259,54 @@
         </nav>
       </div>
     </header>
+
+    <section class="slideshow">
+      <div class="swiper" id="swiper1">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div>
+              <div class="slides-info">
+                <h1>hey</h1>
+                <div class="slide-info">
+                  <span>date</span>
+                  <span>time</span>
+                </div>
+              </div>
+              <img src="../static/images/img-1.jpg" alt="" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div>
+              <div class="slides-info">
+                <h1>hey</h1>
+                <div class="slide-info">
+                  <span>date</span>
+                  <span>time</span>
+                </div>
+              </div>
+              <img src="../static/images/img-2.jpg" alt="" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div>
+              <div class="slides-info">
+                <h1>hey</h1>
+                <div class="slide-info">
+                  <span>date</span>
+                  <span>time</span>
+                </div>
+              </div>
+              <img src="../static/images/img-3.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     {% block body %}{% endblock %}
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="../static/js/index.js"></script>
+    <script src="../static/js/slide.js"></script>
   </body>
 </html>
