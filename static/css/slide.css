@@ -3,7 +3,6 @@
 /* ---------------- */
 .swiper {
   width: 100vw;
-  height: 600px;
   color: #221333;
 }
 .swiper-slide {
@@ -24,7 +23,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 7rem 9rem;
+  padding: 7rem 9rem 0 9rem;
 }
 .slides-info h1 {
   width: 50%;
@@ -104,12 +103,12 @@
 }
 @media screen and (max-width: 850px) {
   .slideshow {
-    position: absolute;
-    top: 276px;
+    position: relative;
+    top: 60px;
     left: 0;
   }
   .slides-info {
-    padding: 5rem 6rem;
+    padding: 5rem 6rem 0 6rem;
   }
   .slides-info h1 {
     font-size: calc(6vw + 1rem);

@@ -36,7 +36,7 @@ li {
 /* Header */
 /* -------------------- */
 header {
-  position: absolute;
+  position: relative;
   top: 60px;
   left: 0;
   width: 100%;
@@ -130,7 +130,9 @@ header p {
 section.navigation {
   background-color: #221333;
   padding: 37px 0;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 60px;
   overflow: hidden;
@@ -271,8 +273,26 @@ section.navigation.open-nav .hamburger-close {
     flex-direction: column;
     margin-top: 0;
     border-radius: 2px;
+    z-index: 2;
   }
   .social-links li {
     margin: 15px 15px;
   }
+}
+/* -------------------- */
+/* Upcoming Section */
+/* -------------------- */
+.upcoming {
+  background-color: #221333;
+  padding: 70px 0;
+  margin-top: -5px;
+}
+.upcoming div {
+  width: 65vw;
+  margin: 0 auto;
+}
+.line1 {
+  width: 20vw;
+  height: 3px;
+  background-color: #ffffff;
 }
