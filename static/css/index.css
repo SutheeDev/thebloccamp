@@ -190,6 +190,24 @@ nav {
 section.navigation.open-nav {
   height: auto;
 }
+.hamburger {
+  display: grid;
+  place-items: left;
+}
+.hamburger-open,
+.hamburger-close {
+  grid-area: 1/1;
+  transition: all 0.2s ease;
+}
+.hamburger-close {
+  opacity: 0;
+}
+section.navigation.open-nav .hamburger-open {
+  opacity: 0;
+}
+section.navigation.open-nav .hamburger-close {
+  opacity: 1;
+}
 /* -------------------- */
 /* Navigation Bar Media Queries */
 /* -------------------- */
