@@ -223,9 +223,11 @@ section.navigation.open-nav .hamburger-close {
   .container {
     align-items: center;
   }
-  nav {
+  .navigation nav {
     background-color: #221333;
     width: 40vw;
+    border-radius: 2px;
+    padding-left: 10px;
   }
   .links {
     display: flex;
@@ -265,5 +267,19 @@ section.navigation.open-nav .hamburger-close {
   align-items: center;
 }
 .social-links li {
-  margin: 0 20px;
+  margin: 0 21px;
+}
+@media screen and (min-width: 850px) {
+  .social-links {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    background-color: #221333;
+    flex-direction: column;
+    margin-top: 0;
+    border-radius: 2px;
+  }
+  .social-links li {
+    margin: 15px 15px;
+  }
 }
