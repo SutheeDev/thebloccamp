@@ -62,6 +62,55 @@
 .day {
   color: #726185;
 }
+.fancy-btn {
+  position: relative;
+  height: 55px;
+  margin-top: 80px;
+}
+.fancy-btn button {
+  text-transform: uppercase;
+  padding: 1rem 1.5rem;
+  color: #221333;
+  border: 3px solid #221333;
+  background-color: transparent;
+  border-radius: 1px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 2;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-weight: 700;
+
+  transition: all 0.3s ease;
+}
+.fancy-btn div.btn-block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-73%, -55%);
+  width: 40vh;
+  max-width: 220px;
+  height: 27px;
+  background-color: #ffffff;
+  border-radius: 1px;
+  z-index: 1;
+}
+.fancy-btn button:hover {
+  background-color: #221333;
+  color: #df3311;
+}
+.btn-bg {
+  width: 230px;
+  height: 74px;
+  background-color: #df3311;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-38%, -50%);
+  border-radius: 1px;
+}
 /* ----------------- */
 /* Shows Section Media Queries */
 /* ----------------- */
@@ -96,7 +145,6 @@
   .show-info {
     width: 100%;
     justify-content: flex-start;
-    /* display: block; */
     margin-bottom: 20px;
   }
   .show-info h3 {
