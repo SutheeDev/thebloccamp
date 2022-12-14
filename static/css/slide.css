@@ -176,9 +176,9 @@
   }
 }
 @media screen and (max-width: 450px) {
-  .slideshow {
+  /* .slideshow {
     margin-top: 167px;
-  }
+  } */
   .slides-info {
     padding: 2rem 2rem;
   }

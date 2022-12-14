@@ -115,6 +115,9 @@
 /* Shows Section Media Queries */
 /* ----------------- */
 @media screen and (max-width: 850px) {
+  .shows {
+    padding: 50px 0;
+  }
   .shows-container {
     width: 85vw;
   }
