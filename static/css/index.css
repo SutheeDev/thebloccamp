@@ -269,6 +269,7 @@ section.navigation.open-nav .hamburger-close {
     position: fixed;
     top: 50%;
     left: 0;
+    transform: translateY(-50%);
     background-color: #221333;
     flex-direction: column;
     margin-top: 0;
@@ -490,6 +491,9 @@ input[type="email"]::placeholder {
   transform: translate(-25%, -50%);
   border-radius: 1px;
 }
+/* -------------------- */
+/* Subscribe Media Queries */
+/* -------------------- */
 @media screen and (max-width: 850px) {
   .subscribe {
     flex-direction: column;
@@ -523,4 +527,17 @@ input[type="email"]::placeholder {
     width: 130px;
     height: 41px;
   }
+}
+/* -------------------- */
+/* Footer */
+/* -------------------- */
+footer {
+  background-color: #221333;
+  padding: 50px 20px;
+  text-align: center;
+}
+footer p {
+  font-family: sans-serif;
+  font-size: 10px;
+  letter-spacing: 1.3px;
 }
