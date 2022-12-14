@@ -287,12 +287,112 @@ section.navigation.open-nav .hamburger-close {
   padding: 70px 0;
   margin-top: -5px;
 }
-.upcoming div {
+.upcoming-container {
   width: 65vw;
   margin: 0 auto;
 }
 .line1 {
   width: 20vw;
   height: 3px;
+  margin: 0 auto;
   background-color: #ffffff;
+  margin-bottom: 30px;
+}
+.upcoming-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.upcoming-title h1 {
+  font-size: calc(3vw + 1rem);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #221333;
+  padding: 0px 0 0px 20px;
+}
+.upcoming-title1 {
+  background-color: #ffffff;
+  line-height: 1.7;
+}
+.upcoming-title2-box .upcoming-title2 {
+  /* width: 20rem; */
+  /* width: 29.2vw; */
+  width: 100%;
+  background-color: #df3311;
+  margin-bottom: 0;
+  line-height: 57px;
+}
+.upcoming-title2-box {
+  /* width: 29.2vw; */
+  width: 272px;
+  position: relative;
+}
+.upcoming-title2-box .block {
+  width: 58px;
+  height: 17px;
+  background-color: #221333;
+  position: absolute;
+  top: 20px;
+  left: 250px;
+  /* left: 299px; */
+  /* left: 26vw; */
+  transform: rotate(90deg);
+}
+.line2 {
+  height: 8px;
+  background-color: #ffffff;
+  width: 110px;
+  position: absolute;
+  bottom: -8px;
+  /* right: -16px; */
+  right: -15px;
+  /* right: -0.8vw; */
+}
+.line3 {
+  height: 30px;
+  border-right: 2px solid #df3311;
+  border-bottom: 2px solid #df3311;
+  margin-bottom: 40px;
+}
+.upcoming-info {
+  width: 100%;
+  color: #221333;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.upcoming-info p {
+  background-color: #df3311;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+@media screen and (max-width: 850px) {
+  .upcoming {
+    margin-top: 55px;
+  }
+  .upcoming-title h1 {
+    font-size: calc(2vw + 0.5rem);
+    padding-left: 10px;
+  }
+  .upcoming-title2-box {
+    width: 210px;
+  }
+  .upcoming-title2-box .block {
+    left: 190px;
+  }
+  .line2 {
+    right: -17px;
+  }
+  .upcoming-title2-box .upcoming-title2 {
+    line-height: 50px;
+  }
+  .upcoming-info {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .upcoming-title2-box .block {
+    left: 137px;
+  }
 }

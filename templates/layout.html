@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="../static/css/index.css" />
     <link rel="stylesheet" href="../static/css/slide.css" />
+    <link rel="stylesheet" href="../static/css/shows.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
@@ -332,13 +333,15 @@
     </section>
 
     <section class="upcoming">
-      <div>
+      <div class="upcoming-container">
         <div class="line1"></div>
         <div class="upcoming-title">
-          <h1>upcoming</h1>
-          <h1>shows</h1>
-          <div class="block"></div>
-          <div class="line2"></div>
+          <h1 class="upcoming-title1">upcoming</h1>
+          <div class="upcoming-title2-box">
+            <h1 class="upcoming-title2">shows</h1>
+            <div class="block"></div>
+            <div class="line2"></div>
+          </div>
         </div>
         <div class="line3"></div>
         <div class="upcoming-info">
@@ -348,6 +351,45 @@
       </div>
     </section>
 
+    <section class="shows">
+      <div class="shows-container">
+        <div class="show">
+          <div class="show-info">
+            <h2>28</h2>
+            <div>
+              <p class="day">wed</p>
+              <p>dec</p>
+            </div>
+            <h3>the ecstasy</h3>
+          </div>
+          <button class="btn">get tickets</button>
+        </div>
+
+        <div class="show">
+          <div class="show-info">
+            <h2>28</h2>
+            <div>
+              <p class="day">wed</p>
+              <p>dec</p>
+            </div>
+            <h3>the ecstasy</h3>
+          </div>
+          <button class="btn">get tickets</button>
+        </div>
+
+        <div class="show">
+          <div class="show-info">
+            <h2>28</h2>
+            <div>
+              <p class="day">wed</p>
+              <p>dec</p>
+            </div>
+            <h3>the ecstasy</h3>
+          </div>
+          <button class="btn">get tickets</button>
+        </div>
+      </div>
+    </section>
     {% block body %}{% endblock %}
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
