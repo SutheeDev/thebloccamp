@@ -5,19 +5,29 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    title = 'Home'
+    return render_template('index.html', title=title)
 
 
 @app.route('/shows')
 def shows():
-    return render_template('shows.html')
+    title = 'Shows'
+    return render_template('shows.html', title=title)
 
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    title = 'About'
+    return render_template('about.html', title=title)
 
 
 @app.route('/contact')
 def contact():
-    return render_template('contact.html')
+    title = 'Contact'
+    return render_template('contact.html', title=title)
+
+
+@app.route('/login')
+def login():
+    title = 'Log In'
+    return render_template('login.html', title=title)
