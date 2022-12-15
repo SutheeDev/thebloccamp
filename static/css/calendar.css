@@ -4,7 +4,9 @@ main {
 .calendar {
   margin-top: -10px;
 }
-.calendar-container {
+.calendar-container,
+.about-container,
+.contact-container {
   width: 75vw;
 }
 .calendar-title2-box .calendar-title2 {
