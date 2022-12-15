@@ -1,0 +1,19 @@
+main {
+  background-color: #221333;
+}
+.calendar {
+  margin-top: -10px;
+}
+.calendar-container {
+  width: 75vw;
+}
+.calendar-title2-box .calendar-title2 {
+  width: 100%;
+  height: 57px;
+  background-color: #df3311;
+}
+@media screen and (max-width: 850px) {
+  .calendar-title2-box .calendar-title2 {
+    height: 50px;
+  }
+}

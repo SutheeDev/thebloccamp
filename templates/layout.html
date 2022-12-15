@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../static/css/index.css" />
     <link rel="stylesheet" href="../static/css/slide.css" />
     <link rel="stylesheet" href="../static/css/shows.css" />
+    <link rel="stylesheet" href="../static/css/calendar.css">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
@@ -94,16 +95,16 @@
                 </svg>
               </li>
               <li class="link">
-                <a href="/">home</a>
+                <a href="{{ url_for('index') }}">home</a>
               </li>
               <li class="link">
-                <a href="/shows">shows</a>
+                <a href="{{ url_for('shows') }}">shows</a>
               </li>
               <li class="link">
-                <a href="/about">about</a>
+                <a href="{{ url_for('about') }}">about</a>
               </li>
               <li class="link">
-                <a href="/contact">contact</a>
+                <a href="{{ url_for('contact') }}">contact</a>
               </li>
             </ul>
           </nav>
@@ -133,7 +134,7 @@
               ></path>
             </g>
           </svg>
-          <a href="/login">log in</a>
+          <a href="{{ url_for('login') }}">log in</a>
         </div>
       </div>
     </section>
@@ -263,7 +264,15 @@
 
     {% block body %}{% endblock %}
 
-    <section class="subscribe">
+    <section class="subscribe" id="subscribe-form">
+
+      <!-- {% if error %}
+        <div class="alert">
+          {{ error }}
+          
+        </div>
+      {% endif %} -->
+
       <div class="subscribe-info">
         <div class="subscribe-title">
           <h1>stay up to date</h1>
@@ -274,7 +283,7 @@
           events
         </p>
       </div>
-      <form method="post" class="subscribe-form">
+      <form action="{{ url_for('subscribe') }}" method="post" class="subscribe-form">
         <input
           autocomplete="off"
           type="email"

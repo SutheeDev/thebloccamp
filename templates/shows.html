@@ -1,3 +1,35 @@
-{% extends 'layout.html' %} {% block body%}{% block title %}Shows{% endblock %}
-<h1>This is shows</h1>
+{% extends 'layout.html' %}{% block title %}Shows{% endblock %} {% block body %}
+<main>
+  <section class="calendar">
+    <div class="calendar-container">
+      <div class="calendar-title">
+        <h1 class="calendar-title1">Calendar</h1>
+        <div class="calendar-title2-box">
+          <div class="calendar-title2"></div>
+          <!-- <h1 class="calendar-title2">Shows</h1> -->
+          <div class="block"></div>
+          <div class="line2"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="calendar-shows">
+    <article class="calendar-show">
+      <img src="" alt="" />
+      <div class="calendar-show-info">
+        <div class="band-date">
+          <h2>The Ecstasy The Ecstasy The Ecstasy</h2>
+          <h2>Wed, Dec 28</h2>
+        </div>
+        <div class="band-info">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique
+            maxime est a quisquam, esse excepturi.
+          </p>
+        </div>
+        <button class="btn">get tickets</button>
+      </div>
+    </article>
+  </section>
+</main>
 {% endblock%}

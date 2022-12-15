@@ -283,12 +283,14 @@ section.navigation.open-nav .hamburger-close {
 /* -------------------- */
 /* Upcoming Section */
 /* -------------------- */
-.upcoming {
+.upcoming,
+.calendar {
   background-color: #221333;
   padding: 70px 0;
   margin-top: -5px;
 }
-.upcoming-container {
+.upcoming-container,
+.calendar-container {
   width: 65vw;
   margin: 0 auto;
 }
@@ -299,19 +301,22 @@ section.navigation.open-nav .hamburger-close {
   background-color: #ffffff;
   margin-bottom: 30px;
 }
-.upcoming-title {
+.upcoming-title,
+.calendar-title {
   display: flex;
   align-items: center;
   margin-bottom: 40px;
 }
-.upcoming-title h1 {
+.upcoming-title h1,
+.calendar-title h1 {
   font-size: calc(3vw + 1rem);
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #221333;
   padding: 0px 0 0px 20px;
 }
-.upcoming-title1 {
+.upcoming-title1,
+.calendar-title1 {
   background-color: #ffffff;
   line-height: 1.7;
 }
@@ -321,11 +326,13 @@ section.navigation.open-nav .hamburger-close {
   margin-bottom: 0;
   line-height: 57px;
 }
-.upcoming-title2-box {
+.upcoming-title2-box,
+.calendar-title2-box {
   width: 272px;
   position: relative;
 }
-.upcoming-title2-box .block {
+.upcoming-title2-box .block,
+.calendar-title2-box .block {
   width: 58px;
   height: 17px;
   background-color: #221333;
@@ -362,20 +369,25 @@ section.navigation.open-nav .hamburger-close {
   padding: 0 10px;
 }
 @media screen and (max-width: 850px) {
-  .upcoming {
+  .upcoming,
+  .calendar {
     margin-top: 55px;
   }
-  .upcoming-container {
+  .upcoming-container,
+  .calendar-container {
     width: 80vw;
   }
-  .upcoming-title h1 {
+  .upcoming-title h1,
+  .calendar-title h1 {
     font-size: calc(2vw + 0.5rem);
     padding-left: 10px;
   }
-  .upcoming-title2-box {
+  .upcoming-title2-box,
+  .calendar-title2-box {
     width: 210px;
   }
-  .upcoming-title2-box .block {
+  .upcoming-title2-box .block,
+  .calendar-title2-box .block {
     left: 190px;
   }
   .line2 {
@@ -389,10 +401,12 @@ section.navigation.open-nav .hamburger-close {
   }
 }
 @media screen and (max-width: 450px) {
-  .upcoming {
+  .upcoming,
+  .calendar {
     padding: 50px 0;
   }
-  .upcoming-title2-box .block {
+  .upcoming-title2-box .block,
+  .calendar-title2-box .block {
     left: 137px;
   }
 }

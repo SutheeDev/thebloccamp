@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
@@ -26,3 +26,14 @@ def contact():
 @app.route('/login')
 def login():
     return render_template('login.html')
+
+
+@app.route('/subscribe', methods=['POST'])
+def subscribe():
+
+    email = request.form.get('email')
+
+    if not email:
+        return redirect(url_for('index')+'#subscribe-form')
+
+    return redirect(url_for('index'))
