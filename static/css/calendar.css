@@ -1,13 +1,10 @@
 main {
   background-color: #221333;
 }
-.calendar {
-  margin-top: -10px;
-}
 .calendar-container,
 .about-container,
 .contact-container {
-  width: 75vw;
+  width: 65vw;
 }
 .calendar-title2-box .calendar-title2 {
   width: 100%;
@@ -17,5 +14,41 @@ main {
 @media screen and (max-width: 850px) {
   .calendar-title2-box .calendar-title2 {
     height: 50px;
+  }
+}
+/* ---------------------- */
+/* Display each band  */
+/* ---------------------- */
+.calendar-shows {
+  width: 65vw;
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+@media screen and (max-width: 850px) {
+  .calendar-shows,
+  .calendar-container,
+  .about-container,
+  .contact-container {
+    width: 80vw;
+  }
+}
+.calendar-show {
+  max-width: 280px;
+  background-color: red;
+}
+.calendar-show img {
+  width: 100%;
+  filter: grayscale(100%);
+}
+@media screen and (max-width: 480px) {
+  .calendar-shows {
+    display: flex;
+    flex-direction: column;
+  }
+  .calendar-show {
+    max-width: 100%;
   }
 }
