@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for
+import cs50
 
 app = Flask(__name__)
+db = cs50.SQL("sqlite:///shows.db")
 
 
 @app.route('/')
@@ -10,7 +12,8 @@ def index():
 
 @app.route('/shows')
 def shows():
-    return render_template('shows.html')
+    allartists = db.execute("SELECT artist FROM shows")
+    return render_template('shows.html', allartists=allartists)
 
 
 @app.route('/about')

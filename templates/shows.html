@@ -15,12 +15,13 @@
   </section>
 
   <section class="calendar-shows">
+    {% for artist in allartists %}
     <article class="calendar-show">
       <img src="../static/images/img-band-1.jpg" alt="" />
       <div class="calendar-show-info">
         <div class="band-date-info">
           <div class="band-date">
-            <h2 class="band-name">The Ecstasy The Ecstasy</h2>
+            <h2 class="band-name">{{ artist['artist'] }}</h2>
             <h2>Wed, Dec 28</h2>
           </div>
           <div class="band-info">
@@ -35,48 +36,7 @@
         </div>
       </div>
     </article>
-
-    <article class="calendar-show">
-      <img src="../static/images/img-band-1.jpg" alt="" />
-      <div class="calendar-show-info">
-        <div class="band-date-info">
-          <div class="band-date">
-            <h2 class="band-name">The Ecstasy</h2>
-            <h2>Wed, Dec 28</h2>
-          </div>
-          <div class="band-info">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Similique maxime est a quisquam, esse excepturi.
-            </p>
-          </div>
-        </div>
-        <div class="getTicket-btn">
-          <button class="btn">get tickets</button>
-        </div>
-      </div>
-    </article>
-
-    <article class="calendar-show">
-      <img src="../static/images/img-band-1.jpg" alt="" />
-      <div class="calendar-show-info">
-        <div class="band-date-info">
-          <div class="band-date">
-            <h2 class="band-name">The Ecstasy</h2>
-            <h2>Wed, Dec 28</h2>
-          </div>
-          <div class="band-info">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Similique maxime est a quisquam, esse excepturi.
-            </p>
-          </div>
-        </div>
-        <div class="getTicket-btn">
-          <button class="btn">get tickets</button>
-        </div>
-      </div>
-    </article>
+    {% endfor %}
   </section>
 </main>
 {% endblock%}
