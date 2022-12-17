@@ -14,6 +14,15 @@
     </div>
   </section>
 
+  {{ months }} {{ years }}
+
+  <!-- {% for date in dates %}
+  <h1>{{ date['date'] }}</h1>
+  {% endfor %} -->
+  <!-- {% for date in dates %}
+  <h1>{{ date['date'] }}</h1>
+  {% endfor %} -->
+
   <section class="calendar-shows">
     {% for artist in allartists %}
     <article class="calendar-show">
@@ -25,10 +34,7 @@
             <h2>Wed, Dec 28</h2>
           </div>
           <div class="band-info">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Similique maxime est a quisquam, esse excepturi.
-            </p>
+            <p>{{ artist['description'] }}</p>
           </div>
         </div>
         <div class="getTicket-btn">
