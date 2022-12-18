@@ -6,27 +6,27 @@ import calendar
 app = Flask(__name__)
 db = cs50.SQL("sqlite:///shows.db")
 
+allInfo = db.execute("SELECT * FROM shows")
+for i in range(len(allInfo)):
+    ymd_str = allInfo[i]['date']
+    datetime_obj = datetime.strptime(ymd_str, '%Y-%m-%d').date()
+    day_num = datetime_obj.day
+    day = datetime_obj.strftime('%A')
+    month = calendar.month_abbr[datetime_obj.month]
+    year = datetime_obj.strftime('%Y')
+    allInfo[i]['day_num'] = day_num
+    allInfo[i]['day'] = day[:3]
+    allInfo[i]['month'] = month
+    allInfo[i]['year'] = year
+
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', allInfo=allInfo)
 
 
 @app.route('/shows')
 def shows():
-    allInfo = db.execute("SELECT * FROM shows")
-    for i in range(len(allInfo)):
-        ymd_str = allInfo[i]['date']
-        datetime_obj = datetime.strptime(ymd_str, '%Y-%m-%d').date()
-        day_num = datetime_obj.day
-        day = datetime_obj.strftime('%A')
-        month = calendar.month_abbr[datetime_obj.month]
-        year = datetime_obj.strftime('%Y')
-        allInfo[i]['day_num'] = day_num
-        allInfo[i]['day'] = day[:3]
-        allInfo[i]['month'] = month
-        allInfo[i]['year'] = year
-
     return render_template('shows.html', allInfo=allInfo)
 
 

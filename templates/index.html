@@ -89,44 +89,21 @@
     </div>
   </div>
 </section>
-
 <section class="shows">
   <div class="shows-container">
+    {% for eachInfo in allInfo %}
     <div class="show">
       <div class="show-info">
-        <h2>28</h2>
+        <h2>{{ eachInfo['day_num'] }}</h2>
         <div>
-          <p class="day">wed</p>
-          <p>dec</p>
+          <p class="day">{{ eachInfo['day'] }}</p>
+          <p>{{ eachInfo['month'] }}</p>
         </div>
-        <h3>the ecstasy</h3>
+        <h3>{{ eachInfo['artist'] }}</h3>
       </div>
       <button class="btn">get tickets</button>
     </div>
-
-    <div class="show">
-      <div class="show-info">
-        <h2>28</h2>
-        <div>
-          <p class="day">wed</p>
-          <p>dec</p>
-        </div>
-        <h3>the ecstasy</h3>
-      </div>
-      <button class="btn">get tickets</button>
-    </div>
-
-    <div class="show">
-      <div class="show-info">
-        <h2>28</h2>
-        <div>
-          <p class="day">wed</p>
-          <p>dec</p>
-        </div>
-        <h3>the ecstasy</h3>
-      </div>
-      <button class="btn">get tickets</button>
-    </div>
+    {% endfor %}
 
     <div class="fancy-btn">
       <button>Get Tickets</button>
