@@ -6,13 +6,17 @@ main {
 .contact-container {
   width: 65vw;
 }
-.calendar-title2-box .calendar-title2 {
+.calendar-title2-box .calendar-title2,
+.about-title2-box .about-title2,
+.contact-title2-box .contact-title2 {
   width: 100%;
   height: 57px;
   background-color: #df3311;
 }
 @media screen and (max-width: 850px) {
-  .calendar-title2-box .calendar-title2 {
+  .calendar-title2-box .calendar-title2,
+  .about-title2-box .about-title2,
+  .contact-title2-box .contact-title2 {
     height: 50px;
   }
 }

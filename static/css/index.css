@@ -330,9 +330,7 @@ section.navigation.open-nav .hamburger-close {
   background-color: #ffffff;
   line-height: 1.7;
 }
-.upcoming-title2-box .upcoming-title2,
-.about-title2-box .about-title2,
-.contact-title2-box .contact-title2 {
+.upcoming-title2-box .upcoming-title2 {
   width: 100%;
   background-color: #df3311;
   margin-bottom: 0;
@@ -419,9 +417,7 @@ section.navigation.open-nav .hamburger-close {
   .line2 {
     right: -17px;
   }
-  .upcoming-title2-box .upcoming-title2,
-  .about-title2-box .about-title2,
-  .contact-title2-box .about-title2 {
+  .upcoming-title2-box .upcoming-title2 {
     line-height: 50px;
   }
   .upcoming-info {
