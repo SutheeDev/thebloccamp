@@ -14,40 +14,20 @@ def index():
 
 @app.route('/shows')
 def shows():
-    # Get all the band's name from database
-    allartists = db.execute("SELECT artist, description FROM shows")
-    # Get all the event date from database
-    dates_data = db.execute("SELECT date FROM shows")
-    dates = []
-    months = []
-    years = []
-
-    for i in range(len(dates_data)):
-        ymd_str = dates_data[i]['date']
-        # Convert a string of date into datetime object
+    allInfo = db.execute("SELECT * FROM shows")
+    for i in range(len(allInfo)):
+        ymd_str = allInfo[i]['date']
         datetime_obj = datetime.strptime(ymd_str, '%Y-%m-%d').date()
+        day_num = datetime_obj.day
+        day = datetime_obj.strftime('%A')
+        month = calendar.month_abbr[datetime_obj.month]
+        year = datetime_obj.strftime('%Y')
+        allInfo[i]['day_num'] = day_num
+        allInfo[i]['day'] = day[:3]
+        allInfo[i]['month'] = month
+        allInfo[i]['year'] = year
 
-        # Use calendar module to get the abbreviation of month and append to the months list
-        months.append(calendar.month_abbr[datetime_obj.month])
-
-        # Get year from datetime object and append to the years list
-        year = datetime_obj.strftime("%Y")
-        years.append(year)
-        # dates.append(datetime_obj)
-
-    # for i in range(len(dates_data)):
-    #     ymd = dates_data[i]['date']
-    #     yearStr = ''
-    #     for i in range(4):
-    #         yearStr += ymd[i]
-    #     yearInt = int(yearStr)
-    #     year = yearInt.strftime("%Y")
-    #     dates.append(year)
-
-        # dates.append(dates_data[i]['date'])
-    #     return dates
-
-    return render_template('shows.html', allartists=allartists, months=months, years=years)
+    return render_template('shows.html', allInfo=allInfo)
 
 
 @app.route('/about')

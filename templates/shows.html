@@ -14,27 +14,21 @@
     </div>
   </section>
 
-  {{ months }} {{ years }}
-
-  <!-- {% for date in dates %}
-  <h1>{{ date['date'] }}</h1>
-  {% endfor %} -->
-  <!-- {% for date in dates %}
-  <h1>{{ date['date'] }}</h1>
-  {% endfor %} -->
-
   <section class="calendar-shows">
-    {% for artist in allartists %}
+    {% for eachInfo in allInfo %}
     <article class="calendar-show">
-      <img src="../static/images/img-band-1.jpg" alt="" />
+      <img src="{{ eachInfo['image'] }}" alt="" />
       <div class="calendar-show-info">
         <div class="band-date-info">
           <div class="band-date">
-            <h2 class="band-name">{{ artist['artist'] }}</h2>
-            <h2>Wed, Dec 28</h2>
+            <h2 class="band-name">{{ eachInfo['artist'] }}</h2>
+            <h2>
+              {{ eachInfo['day'] }}, {{ eachInfo['month'] }} {{
+              eachInfo['day_num'] }}
+            </h2>
           </div>
           <div class="band-info">
-            <p>{{ artist['description'] }}</p>
+            <p>{{ eachInfo['description'] }}</p>
           </div>
         </div>
         <div class="getTicket-btn">
