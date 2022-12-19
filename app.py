@@ -39,6 +39,10 @@ def about():
 def contact():
     return render_template('contact.html')
 
+@app.route('/tickets')
+def tickets():
+    return render_template('tickets.html')
+
 
 @app.route('/login')
 def login():
