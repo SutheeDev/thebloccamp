@@ -5,7 +5,7 @@ section.login,
 section.newsletter,
 section.subscribed {
   background-color: #221333;
-  padding: 100px 0 0 0;
+  padding: 50px 0 0 0;
   height: 68vh;
   overflow: hidden;
 }
@@ -120,6 +120,19 @@ input[type="email"].email-address::placeholder {
   transform: translate(-25%, -50%);
   border-radius: 1px;
 }
+/* ------------------- */
+/* Error_statement */
+/* ------------------- */
+.alert {
+  border: none;
+  border-radius: 2px;
+  padding: 10px 30px;
+  color: #df3311;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+}
+
 /* ------------------- */
 /* Media Queries */
 /* ------------------- */

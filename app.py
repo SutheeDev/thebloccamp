@@ -74,12 +74,17 @@ def subscribe():
     return render_template('subscribe.html')
 
 
-@app.route('/subscribed', methods=['GET', 'POST'])
+@app.route('/subscribed', methods=['POST'])
 def subscribed():
     if request.method == 'POST':
         firstname = request.form.get('firstname')
         lastname = request.form.get('lastname')
         email = request.form.get('email-address')
+
+        if not firstname or not lastname or not email:
+            error_statement = '* All form fields are required'
+            return render_template('subscribe.html', error_statement=error_statement)
+
         db.execute("INSERT INTO subscribers (firstname, lastname, email) VALUES (?, ?, ?)",
                    firstname, lastname, email)
         return render_template('subscribed.html', firstname=firstname)

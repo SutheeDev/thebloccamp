@@ -1,7 +1,11 @@
 {% extends 'layout.html'%}{% block title %}Subscribe{% endblock %}{% block body
 %}
+
 <section class="newsletter">
   <div class="newsletter-container">
+    {% if error_statement %}
+    <h3 class="alert">{{ error_statement }}</h3>
+    {% endif %}
     <h1>Subscribe</h1>
 
     <form
