@@ -1,0 +1,40 @@
+{% extends 'layout.html'%}{% block title %}Subscribe{% endblock %}{% block body
+%}
+<section class="newsletter">
+  <div class="newsletter-container">
+    <h1>Subscribe</h1>
+
+    <form
+      action="{{ url_for('subscribe') }}"
+      method="post"
+      class="newsletter-form"
+    >
+      <input
+        autocomplete="off"
+        type="text"
+        placeholder="First Name *"
+        name="firstname"
+        class="firstname"
+      />
+      <input
+        autocomplete="off"
+        type="text"
+        placeholder="Last Name *"
+        name="lastname"
+        class="lastname"
+      />
+      <input
+        autocomplete="off"
+        type="password"
+        placeholder="Email Address *"
+        name="email-address"
+        class="email-address"
+      />
+      <div class="newsletter-btn-block">
+        <button class="btn newsletter-btn" type="submit">Subscribe</button>
+        <div class="newsletter-btn-bg"></div>
+      </div>
+    </form>
+  </div>
+</section>
+{% endblock %}

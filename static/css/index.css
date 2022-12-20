@@ -17,6 +17,7 @@ body {
   font-family: Oswald, sans-serif;
   font-size: 14px;
   color: #ffffff;
+  background-color: #221333;
   /* letter-spacing: 1px; */
 }
 a {
@@ -487,11 +488,13 @@ section.navigation.open-nav .hamburger-close {
 .subscribe-form {
   width: 50%;
   background-color: #df3311;
-  padding: 75px 0 75px 20px;
+  /* padding: 75px 0 75px 20px; */
+  padding: 75px 0 75px 80px;
   display: flex;
   z-index: 1;
 }
 .btn.subscribe-btn {
+  width: 100%;
   color: #221333;
   border: 3px solid #221333;
   position: absolute;
@@ -520,7 +523,9 @@ input[type="email"]::placeholder {
 }
 .subscribe-btn-block {
   position: relative;
-  width: 142px;
+  /* width: 142px; */
+  width: 60%;
+  max-width: 350px;
   height: 53px;
 }
 .subscribe-btn-bg {

@@ -1,0 +1,144 @@
+/* ------------------- */
+/* Login Page, Subscribe Page, Subscribed Page */
+/* ------------------- */
+section.login,
+section.newsletter,
+section.subscribed {
+  background-color: #221333;
+  padding: 100px 0 0 0;
+  height: 68vh;
+  overflow: hidden;
+}
+.login-container,
+.newsletter-container,
+.subscribed-container {
+  width: 50vw;
+  max-width: 600px;
+  min-width: 450px;
+  margin: 0 auto;
+}
+.login h1,
+.newsletter h1,
+.subscribed h1 {
+  text-transform: uppercase;
+  font-size: calc(3vw + 1rem);
+  letter-spacing: 1px;
+  background-color: transparent;
+  padding-left: 30px;
+  line-height: 1.2;
+}
+/* ------------------- */
+/* Form */
+/* ------------------- */
+.login-form,
+.newsletter-form,
+.thank-message {
+  width: 100%;
+  background-color: #df3311;
+  border-radius: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 20px;
+  overflow: hidden;
+}
+.thank-message {
+  padding: 40px 20px;
+  justify-content: center;
+  align-items: center;
+}
+.thank-message h3 {
+  text-transform: capitalize;
+  font-size: calc(1.5vw + 0.5rem);
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+.username,
+.password,
+.firstname,
+.lastname,
+.email-address {
+  width: 100%;
+  outline: none;
+  padding: 1rem 1.5rem 1rem 1rem;
+  border: none;
+  border-width: 3px;
+  border-color: #213333;
+  border-style: solid;
+  margin: 0 0 40px 0;
+}
+.username::placeholder,
+.password::placeholder,
+.firstname::placeholder,
+.lastname::placeholder,
+.email-address::placeholder {
+  font-size: 14px;
+  color: #84c3c3;
+}
+/* ------------------- */
+/* button */
+/* ------------------- */
+.login-btn-block,
+.newsletter-btn-block {
+  position: relative;
+  width: 142px;
+  height: 53px;
+}
+.subscribed-btn-block {
+  position: relative;
+  width: 250px;
+  height: 53px;
+}
+.btn.login-btn,
+.btn.newsletter-btn,
+.btn.subscribed-btn {
+  width: 100%;
+  color: #221333;
+  border: 3px solid #221333;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.btn.login-btn:hover,
+.btn.newsletter-btn:hover,
+.btn.subscribed-btn:hover {
+  background-color: #221333;
+  border: 3px solid #221333;
+  color: #df3311;
+}
+.login-btn-bg,
+.newsletter-btn-bg,
+.subscribed-btn-bg {
+  width: 160%;
+  height: 50%;
+  background-color: #ffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-25%, -50%);
+  border-radius: 1px;
+}
+/* ------------------- */
+/* Media Queries */
+/* ------------------- */
+@media screen and (max-width: 850px) {
+  section.login,
+  section.newsletter,
+  section.subscribed {
+    margin-top: 60px;
+    height: 58vh;
+  }
+  .login-btn-block,
+  .newsletter-btn-block {
+    width: 130px;
+    height: 41px;
+  }
+  .subscribed-btn-block {
+    height: 41px;
+  }
+  .thank-message h3 {
+    font-size: 22px;
+  }
+}

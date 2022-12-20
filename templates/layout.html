@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../static/css/about.css">
     <link rel="stylesheet" href="../static/css/contact.css">
     <link rel="stylesheet" href="../static/css/tickets.css">
+    <link rel="stylesheet" href="../static/css/login.css">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
@@ -266,40 +267,6 @@
     </header>
 
     {% block body %}{% endblock %}
-
-    <section class="subscribe" id="subscribe-form">
-
-      <!-- {% if error %}
-        <div class="alert">
-          {{ error }}
-          
-        </div>
-      {% endif %} -->
-
-      <div class="subscribe-info">
-        <div class="subscribe-title">
-          <h1>stay up to date</h1>
-          <div class="block"></div>
-        </div>
-        <p>
-          Sign up to get our newsletter for all the latest news, shows, and
-          events
-        </p>
-      </div>
-      <form action="{{ url_for('subscribe') }}" method="post" class="subscribe-form">
-        <input
-          autocomplete="off"
-          type="email"
-          placeholder="Enter your email here *"
-          name="email"
-          class="email"
-        />
-        <div class="subscribe-btn-block">
-          <button class="btn subscribe-btn" type="submit">Subscribe</button>
-          <div class="subscribe-btn-bg"></div>
-        </div>
-      </form>
-    </section>
 
     <footer>
       <p>&#1692022 by The Bloc Camp. Created by SutheeDeveloper</p>

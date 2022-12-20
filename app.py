@@ -1,9 +1,15 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, g, redirect, session
+# from flask_session import Session
+from functools import wraps
 import cs50
 from datetime import datetime
 import calendar
 
 app = Flask(__name__)
+# app.config["SESSION_PERMANENT"] = False
+# app.config["SESSION_TYPE"] = "filesystem"
+# Session(app)
+
 db = cs50.SQL("sqlite:///shows.db")
 
 allInfo = db.execute("SELECT * FROM shows")
@@ -22,10 +28,10 @@ for i in range(len(allInfo)):
 
 @app.route('/')
 def index():
-    threeUpcoming = []
-    for i in range(3):
-        threeUpcoming.append(allInfo[i])
-    return render_template('index.html', allInfo=allInfo, threeUpcoming=threeUpcoming)
+    fourUpcoming = []
+    for i in range(4):
+        fourUpcoming.append(allInfo[i])
+    return render_template('index.html', allInfo=allInfo, fourUpcoming=fourUpcoming)
 
 
 @app.route('/shows', methods=['GET', 'POST'])
@@ -57,12 +63,17 @@ def login():
     return render_template('login.html')
 
 
-@app.route('/subscribe', methods=['POST'])
+@app.route('/subscribe', methods=['GET', 'POST'])
 def subscribe():
 
-    email = request.form.get('email')
+    # email = request.form.get('email')
 
-    if not email:
-        return redirect(url_for('index')+'#subscribe-form')
+    # if not email:
+    #     return redirect(url_for('index')+'#subscribe-form')
 
-    return redirect(url_for('index'))
+    return render_template('subscribe.html')
+
+
+@app.route('/subscribed', methods=['GET', 'POST'])
+def subscribed():
+    return render_template('subscribed.html')

@@ -3,7 +3,7 @@
 <section class="slideshow">
   <div class="swiper" id="swiper1">
     <div class="swiper-wrapper">
-      {% for oneUpcoming in threeUpcoming %}
+      {% for oneUpcoming in fourUpcoming %}
       <div class="swiper-slide">
         <div>
           <div class="slides-info">
@@ -26,59 +26,6 @@
         </div>
       </div>
       {% endfor %}
-
-      <!-- <div class="swiper-slide">
-        <div>
-          <div class="slides-info">
-            <h1>turning jane.</h1>
-            <div class="slide-info">
-              <span class="slide-date">thursday dec. 29</span>
-              <span class="slide-time">7.00 pm</span>
-              <div>
-                <a href="{{ url_for('shows') }}">
-                  <button>Get Tickets</button>
-                </a>
-                <div class="btn-block"></div>
-              </div>
-            </div>
-          </div>
-          <img src="../static/images/img-4.jpg" alt="" />
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div>
-          <div class="slides-info">
-            <h1>double helix.</h1>
-            <div class="slide-info">
-              <span class="slide-date">friday dec. 30</span>
-              <span class="slide-time">8.00 pm</span>
-              <div>
-                <a href="{{ url_for('shows') }}">
-                  <button>Get Tickets</button>
-                </a>
-                <div class="btn-block"></div>
-              </div>
-            </div>
-          </div>
-          <img src="../static/images/img-3.jpg" alt="" />
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div>
-          <div class="slides-info">
-            <h1>double helix.</h1>
-            <div class="slide-info">
-              <span class="slide-date">saturday dec. 31</span>
-              <span class="slide-time">6.30 pm</span>
-              <div>
-                <button>Get Tickets</button>
-                <div class="btn-block"></div>
-              </div>
-            </div>
-          </div>
-          <img src="../static/images/img-5.jpg" alt="" />
-        </div>
-      </div> -->
     </div>
   </div>
 </section>
@@ -127,6 +74,31 @@
       <div class="btn-bg"></div>
     </div>
   </div>
+</section>
+
+<section class="subscribe" id="subscribe-form">
+  <div class="subscribe-info">
+    <div class="subscribe-title">
+      <h1>stay up to date</h1>
+      <div class="block"></div>
+    </div>
+    <p>
+      Sign up to get our newsletter for all the latest news, shows, and events
+    </p>
+  </div>
+  <form action="{{ url_for('subscribe') }}" class="subscribe-form">
+    <!-- <input
+      autocomplete="off"
+      type="email"
+      placeholder="Enter your email here *"
+      name="email"
+      class="email"
+    /> -->
+    <div class="subscribe-btn-block">
+      <button class="btn subscribe-btn" type="submit">Subscribe</button>
+      <div class="subscribe-btn-bg"></div>
+    </div>
+  </form>
 </section>
 
 {% endblock %}

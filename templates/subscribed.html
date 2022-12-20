@@ -1,0 +1,20 @@
+{% extends 'layout.html'%}{% block title %}Subscribed{% endblock %}{% block body
+%}
+<section class="subscribed">
+  <div class="subscribed-container">
+    <h1>Thank You!</h1>
+
+    <div class="thank-message">
+      <h3>You have successfully subscribed</h3>
+      <div class="subscribed-btn-block">
+        <a href="{{ url_for('index') }}">
+          <button class="btn subscribed-btn" type="submit">
+            Back to Home Page
+          </button>
+        </a>
+        <div class="subscribed-btn-bg"></div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
