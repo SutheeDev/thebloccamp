@@ -11,7 +11,7 @@
 .swiper-slide img {
   width: 100%;
   object-fit: cover;
-  filter: grayscale(100%);
+  filter: grayscale(100%) brightness(30%);
 }
 .slides-info {
   position: absolute;

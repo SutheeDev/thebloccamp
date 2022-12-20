@@ -3,12 +3,16 @@
 <section class="slideshow">
   <div class="swiper" id="swiper1">
     <div class="swiper-wrapper">
+      {% for oneUpcoming in threeUpcoming %}
       <div class="swiper-slide">
         <div>
           <div class="slides-info">
-            <h1>the ecstasy.</h1>
+            <h1>{{ oneUpcoming['artist'] }}.</h1>
             <div class="slide-info">
-              <span class="slide-date">wednesday dec. 28</span>
+              <span class="slide-date"
+                >{{ oneUpcoming['day'] }} {{ oneUpcoming['month'] }}. {{
+                oneUpcoming['day_num'] }}</span
+              >
               <span class="slide-time">8.00 pm</span>
               <div>
                 <a href="{{ url_for('shows') }}">
@@ -18,10 +22,12 @@
               </div>
             </div>
           </div>
-          <img src="../static/images/img-1.jpg" alt="" />
+          <img src="{{ oneUpcoming['image_bg'] }}" alt="" />
         </div>
       </div>
-      <div class="swiper-slide">
+      {% endfor %}
+
+      <!-- <div class="swiper-slide">
         <div>
           <div class="slides-info">
             <h1>turning jane.</h1>
@@ -72,7 +78,7 @@
           </div>
           <img src="../static/images/img-5.jpg" alt="" />
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>

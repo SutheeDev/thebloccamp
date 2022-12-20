@@ -15,18 +15,25 @@ for i in range(len(allInfo)):
     month = calendar.month_abbr[datetime_obj.month]
     year = datetime_obj.strftime('%Y')
     allInfo[i]['day_num'] = day_num
-    allInfo[i]['day'] = day[:3]
+    allInfo[i]['day'] = day
     allInfo[i]['month'] = month
     allInfo[i]['year'] = year
 
 
 @app.route('/')
 def index():
-    return render_template('index.html', allInfo=allInfo)
+    threeUpcoming = []
+    for i in range(3):
+        threeUpcoming.append(allInfo[i])
+    return render_template('index.html', allInfo=allInfo, threeUpcoming=threeUpcoming)
 
 
-@app.route('/shows')
+@app.route('/shows', methods=['GET', 'POST'])
 def shows():
+    if request.method == 'POST':
+        # if request.form.get('Get Tickets') == 'Get Tickets':
+        return render_template('tickets.html')
+
     return render_template('shows.html', allInfo=allInfo)
 
 
@@ -38,6 +45,7 @@ def about():
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
+
 
 @app.route('/tickets')
 def tickets():
