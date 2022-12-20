@@ -76,4 +76,12 @@ def subscribe():
 
 @app.route('/subscribed', methods=['GET', 'POST'])
 def subscribed():
-    return render_template('subscribed.html')
+    if request.method == 'POST':
+        firstname = request.form.get('firstname')
+        lastname = request.form.get('lastname')
+        email = request.form.get('email-address')
+        db.execute("INSERT INTO subscribers (firstname, lastname, email) VALUES (?, ?, ?)",
+                   firstname, lastname, email)
+        return render_template('subscribed.html', firstname=firstname)
+
+    return redirect('subscribe.html')

@@ -5,7 +5,7 @@
     <h1>Subscribe</h1>
 
     <form
-      action="{{ url_for('subscribe') }}"
+      action="{{ url_for('subscribed') }}"
       method="post"
       class="newsletter-form"
     >
@@ -25,7 +25,7 @@
       />
       <input
         autocomplete="off"
-        type="password"
+        type="email"
         placeholder="Email Address *"
         name="email-address"
         class="email-address"

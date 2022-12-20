@@ -58,7 +58,7 @@ section.subscribed {
 .password,
 .firstname,
 .lastname,
-.email-address {
+input[type="email"].email-address {
   width: 100%;
   outline: none;
   padding: 1rem 1.5rem 1rem 1rem;
@@ -72,7 +72,7 @@ section.subscribed {
 .password::placeholder,
 .firstname::placeholder,
 .lastname::placeholder,
-.email-address::placeholder {
+input[type="email"].email-address::placeholder {
   font-size: 14px;
   color: #84c3c3;
 }
