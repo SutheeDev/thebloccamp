@@ -1,4 +1,6 @@
-from flask import Flask, render_template, request, redirect, url_for, g, redirect, session
+from flask import Flask, render_template, request, redirect, url_for, redirect
+import os
+import smtplib
 # from flask_session import Session
 from functools import wraps
 import cs50
@@ -9,6 +11,7 @@ app = Flask(__name__)
 # app.config["SESSION_PERMANENT"] = False
 # app.config["SESSION_TYPE"] = "filesystem"
 # Session(app)
+
 
 db = cs50.SQL("sqlite:///shows.db")
 
@@ -84,6 +87,12 @@ def subscribed():
         if not firstname or not lastname or not email:
             error_statement = '* All form fields are required'
             return render_template('subscribe.html', error_statement=error_statement)
+
+        message = "You've been subscribed to the Bloc Camp email newsletter"
+        server = smtplib.SMTP("smtp.gmail.com", 587)
+        server.starttls()
+        server.login("sutheedevtest@gmail.com", os.environ.get('MY_PASSWORD'))
+        server.sendmail("sutheedevtest@gmail.com", email, message)
 
         db.execute("INSERT INTO subscribers (firstname, lastname, email) VALUES (?, ?, ?)",
                    firstname, lastname, email)
