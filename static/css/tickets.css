@@ -20,6 +20,7 @@
   font-size: 56px;
   letter-spacing: -1px;
   margin-bottom: 15px;
+  text-transform: capitalize;
 }
 .tickets-band-info p {
   width: 460px;
@@ -33,6 +34,7 @@
   max-width: 980px;
   text-align: center;
   margin: 0 auto 40px auto;
+  filter: grayscale(100%);
 }
 .tickets-img img {
   width: 100%;

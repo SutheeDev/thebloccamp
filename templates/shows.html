@@ -6,7 +6,6 @@
         <h1 class="calendar-title1">Calendar</h1>
         <div class="calendar-title2-box">
           <div class="calendar-title2"></div>
-          <!-- <h1 class="calendar-title2">Shows</h1> -->
           <div class="block"></div>
           <div class="line2"></div>
         </div>
@@ -32,17 +31,13 @@
           </div>
         </div>
         <div class="getTicket-btn">
-          <!-- <a href="{{ url_for('tickets') }}"> -->
-          <!-- <button class="btn" type="submit" value="getBandId" name="getTicket">
-            get tickets
-          </button> -->
-          <!-- </a> -->
-          <form action="/shows" method="post">
+          <form action="/tickets" method="post">
             <input
               class="btn"
+              id="{{ eachInfo['id'] }}"
               type="submit"
               value="Get Tickets"
-              name="Get Tickets"
+              name="Get Tickets.{{ eachInfo['id'] }}"
             />
           </form>
         </div>

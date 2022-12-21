@@ -1,24 +1,23 @@
 {% extends 'layout.html' %} {% block title %}Ticket{% endblock %} {% block body
-%}
+%}{% for bandInfo in bandInfos %}
 <main class="tickets-page">
   <div class="tickets-container">
     <section class="tickets-band-info">
-      <h1>Badlands Bound</h1>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur
-        magni ut voluptatibus eius, mollitia qui nobis exercitationem nam
-        officiis amet.
-      </p>
+      <h1>{{ bandInfo['artist'] }}</h1>
+      <p>{{ bandInfo['description']}}</p>
     </section>
   </div>
   <div class="tickets-img">
-    <img src="../static/images/img-1.jpg" alt="" />
+    <img src="{{ bandInfo['image_bg'] }}" alt="" />
   </div>
 </main>
 <section class="time-location">
   <div class="time-location-container">
     <h3>Time & Location</h3>
-    <p>Fri, Apr 06, 2022, 7PM - 11PM</p>
+    <p>
+      {{ bandInfo['day'] }}, {{ bandInfo['month'] }} {{ bandInfo['day_num'] }},
+      {{ bandInfo['year'] }}, {{ bandInfo['start'] }} - {{ bandInfo['end'] }}
+    </p>
     <p>
       The Bloc Camp, 500 Terry A Francois Blvd, San Francisco, CA 94158, USA
     </p>
@@ -35,7 +34,7 @@
     </div>
     <div class="tickets-calculation">
       <p>Regular</p>
-      <p>$40.00</p>
+      <p>${{ bandInfo['price'] }}</p>
       <div class="tickets-amount">
         <p class="minus">-</p>
         <p class="amount">0</p>
@@ -53,4 +52,4 @@
     </a>
   </div>
 </section>
-{% endblock %}
+{% endfor %} {% endblock %}

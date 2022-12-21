@@ -1,17 +1,12 @@
 from flask import Flask, render_template, request, redirect, url_for, redirect
 import os
 import smtplib
-# from flask_session import Session
 from functools import wraps
 import cs50
 from datetime import datetime
 import calendar
 
 app = Flask(__name__)
-# app.config["SESSION_PERMANENT"] = False
-# app.config["SESSION_TYPE"] = "filesystem"
-# Session(app)
-
 
 db = cs50.SQL("sqlite:///shows.db")
 
@@ -37,12 +32,8 @@ def index():
     return render_template('index.html', allInfo=allInfo, fourUpcoming=fourUpcoming)
 
 
-@app.route('/shows', methods=['GET', 'POST'])
+@app.route('/shows')
 def shows():
-    if request.method == 'POST':
-        # if request.form.get('Get Tickets') == 'Get Tickets':
-        return render_template('tickets.html')
-
     return render_template('shows.html', allInfo=allInfo)
 
 
@@ -56,8 +47,20 @@ def contact():
     return render_template('contact.html')
 
 
-@app.route('/tickets')
+@app.route('/tickets', methods=['GET', 'POST'])
 def tickets():
+    if request.method == 'POST':
+        for key in request.form:
+            if key.startswith('Get Tickets.'):
+                id = key.partition('.')[-1]
+                bandInfos = db.execute("SELECT * FROM shows WHERE id = ?", id)
+                ymd_str = bandInfos[0]['date']
+                datetime_obj = datetime.strptime(ymd_str, '%Y-%m-%d').date()
+                bandInfos[0]['day_num'] = datetime_obj.day
+                bandInfos[0]['day'] = datetime_obj.strftime('%A')
+                bandInfos[0]['month'] = calendar.month_abbr[datetime_obj.month]
+                bandInfos[0]['year'] = datetime_obj.strftime('%Y')
+        return render_template('tickets.html', bandInfos=bandInfos)
     return render_template('tickets.html')
 
 
