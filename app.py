@@ -64,11 +64,6 @@ def tickets():
     return render_template('tickets.html')
 
 
-@app.route('/login')
-def login():
-    return render_template('login.html')
-
-
 @app.route('/subscribe')
 def subscribe():
     return render_template('subscribe.html')
