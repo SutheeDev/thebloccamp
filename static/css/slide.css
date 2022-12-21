@@ -96,6 +96,9 @@
   background-color: #221333;
   color: #df3311;
 }
+/* ---------------- */
+/* Slideshow Media Queries */
+/* ---------------- */
 @media screen and (min-width: 1300px) {
   .slides-info h1 {
     line-height: 7rem;
@@ -176,9 +179,6 @@
   }
 }
 @media screen and (max-width: 450px) {
-  /* .slideshow {
-    margin-top: 167px;
-  } */
   .slides-info {
     padding: 2rem 2rem;
   }

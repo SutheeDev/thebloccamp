@@ -1,4 +1,6 @@
+/* -------------------- */
 /* Universal setup */
+/* -------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -13,12 +15,10 @@
   font-style: normal;
 }
 body {
-  /* font-family: "Anton", sans-serif; */
   font-family: Oswald, sans-serif;
   font-size: 14px;
   color: #ffffff;
   background-color: #221333;
-  /* letter-spacing: 1px; */
 }
 a {
   text-decoration: none;
@@ -28,7 +28,9 @@ ul,
 li {
   list-style: none;
 }
-/* Color Palette */
+/* -------------------- */
+/* Color Scheme */
+/* -------------------- */
 /* dark blue: #221333; */
 /* reddish: #df3311 */
 /* white: #ffffff */
@@ -507,20 +509,7 @@ section.navigation.open-nav .hamburger-close {
   border: 3px solid #221333;
   color: #df3311;
 }
-input[type="email"] {
-  width: 60%;
-  outline: none;
-  padding: 1rem 1.5rem 1rem 1rem;
-  border: none;
-  border-width: 3px;
-  border-color: #213333;
-  border-style: solid;
-  margin-right: 19px;
-}
-input[type="email"]::placeholder {
-  font-size: 14px;
-  color: #84c3c3;
-}
+
 .subscribe-btn-block {
   position: relative;
   /* width: 142px; */
@@ -566,10 +555,7 @@ input[type="email"]::placeholder {
   .subscribe-info p {
     padding: 25px 0 15px 20px;
   }
-  input[type="email"] {
-    width: 100%;
-    margin: 0 0 20px 0;
-  }
+
   .subscribe-btn-block {
     width: 130px;
     height: 41px;

@@ -1,3 +1,6 @@
+/* ------------- */
+/* Contact page */
+/* ------------- */
 .contact-info {
   background-color: #221333;
   padding: 0 0 20px 0;
@@ -43,7 +46,9 @@
 .map-address {
   margin-bottom: 40px;
 }
-
+/* ------------- */
+/* Contact page Media Queries */
+/* ------------- */
 @media screen and (min-width: 850px) {
   .contact-info {
     padding: 40px 0 0 0;
@@ -53,10 +58,6 @@
     max-width: 980px;
     padding: 40px 0;
   }
-  /* .google {
-    width: 686px;
-    height: 514.5px;
-  } */
   .square {
     position: absolute;
     width: 250px;

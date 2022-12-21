@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, redirect
+from flask import Flask, render_template, request, redirect, url_for
 import os
 import smtplib
 from functools import wraps
@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 db = cs50.SQL("sqlite:///shows.db")
 
-allInfo = db.execute("SELECT * FROM shows")
+allInfo = db.execute("SELECT * FROM shows ORDER BY date")
 for i in range(len(allInfo)):
     ymd_str = allInfo[i]['date']
     datetime_obj = datetime.strptime(ymd_str, '%Y-%m-%d').date()
@@ -69,14 +69,8 @@ def login():
     return render_template('login.html')
 
 
-@app.route('/subscribe', methods=['GET', 'POST'])
+@app.route('/subscribe')
 def subscribe():
-
-    # email = request.form.get('email')
-
-    # if not email:
-    #     return redirect(url_for('index')+'#subscribe-form')
-
     return render_template('subscribe.html')
 
 
